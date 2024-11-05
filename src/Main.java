@@ -9,7 +9,7 @@ public class Main {
         System.out.println("\nBem-vindo à sua Carteira Digital!");
 
 
-        while (input != '4') {
+        while (input != '5') {
             System.out.println("\n"+menu());
             System.out.print("\nUsuário: ");
 
@@ -22,7 +22,8 @@ public class Main {
                "1 - Adicionar Saldo\n" +
                "2 - Realizar Pagamento\n" +
                "3 - Verificar Saldo\n" +
-               "4 - Sair";
+               "4 - Histórico de Transações\n" +
+               "5 - Sair";
     }
 
     public static char lerEntradaDoUsuario(CarteiraDigital carteira, Scanner sc) {
@@ -34,6 +35,8 @@ public class Main {
         } else if (entrada == '3') {
             carteira.verificarSaldo();
         } else if (entrada == '4') {
+            carteira.historicoTransacoes();
+        } else if (entrada == '5') {
             System.out.println("Obrigado por usar a sua Carteira Digital!");
         } else {
             System.out.println("Caractere incorreto! Por favor digite novamente.");
